@@ -65,7 +65,7 @@ color: #fff;
 outline: none;
 background: rgba(255, 255, 255, 0.1);
 transition: all 0.2s ease-out;
-&:hover {
+&:active {
     background: rgba(255, 255, 255, 0.9);
     color: #bc1888;
     box-shadow: 3px 3px 8px #fff, -3px -3px 8px #fff;
