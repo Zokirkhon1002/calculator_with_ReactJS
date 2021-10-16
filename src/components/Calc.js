@@ -13,15 +13,22 @@ function Calc() {
     setCurrent(current + valueBtn);
   };
 
+  const sound = () =>{
+document.getElementById("sound").play();
+}
+
   const delete_handler = () => {
+sound();
     setCurrent(String(current).slice(0, -1));
   };
   const clear_all_handler = () => {
+sound()
     setCurrent("");
     setPrevious("");
     setOperation("");
   };
   const operation_handler = (e) => {
+sound()
     if (current === "") return;
     if (previous !== "") {
       let val = hisobla();
@@ -35,6 +42,7 @@ function Calc() {
   };
 
   const equals_handler = () => {
+sound()
     let val = hisobla();
     if (val === undefined || val === null) return;
 
@@ -43,6 +51,7 @@ function Calc() {
     setOperation("");
   };
   const hisobla = () => {
+sound()
     let result;
     let previous_number = parseFloat(previous);
     let current_number = parseFloat(current);
@@ -69,6 +78,7 @@ function Calc() {
   };
   return (
     <Container>
+     <audio id="sound" src="./sound.mp3"></audio>
       <Screen>
         <Previous>
           {previous} {operation}
