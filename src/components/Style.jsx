@@ -24,7 +24,7 @@ font-size: 16px;
 text-transform: uppercase;
 border-radius: 10px 0 10px 0;
 transform: scale(1);
-&:hover {
+&:active{
     transform: scale(1.1);
     border-radius: 0 10px 0 10px;
 }
